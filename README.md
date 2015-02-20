@@ -8,7 +8,7 @@ In order for the script to work properly the data set needs to be located in a f
 	install.packages('dplyr')
 	
 ## How it works
-1. The script first parses all of the test data text files
+1. The script first parses all of the test data text files, including the activity number, all of the variables and the subjects
 2. It replaces the activity numbers with their respective labels
 3. It renames the the columns with the names loaded from the features.txt-file
 4. It clips together the different sets to create a complete test-data set
@@ -17,3 +17,4 @@ In order for the script to work properly the data set needs to be located in a f
 7. Not wanted columns, that is columns that are not Activity, Subject or contain mean() or std(), are removed
 8. The data set is grouped by Activity and Subject
 9. The mean is calculated for each variable on each combination of Activity and Subject
+10. It's all written to the result file activity_data.txt
