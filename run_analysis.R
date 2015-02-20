@@ -33,7 +33,8 @@ train <- bindTogether(trainData, trainActivities, trainSubjects)
 # Merge the test and train frames together
 dataset <- rbind(test, train)
 
-# Remove all columns not containing mean() or std()
+# Remove all columns not containing mean(), std() or is our newly created
+# Activity and Subject columns
 isWantedCol <- function (name) {
         if (name == 'Activity' | name == 'Subject') {
                 return(TRUE)
